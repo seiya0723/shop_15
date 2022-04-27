@@ -1,0 +1,29 @@
+{% extends "common/base.html" %}
+
+{% block main %}
+
+    <div>30日間</div>
+    {% for rank in day_30_ranks  %}
+    <div class="border">
+        <div>{{ forloop.counter }} 位</div>
+        <div>{{ rank.product.name }}</div>
+    </div>
+    {% endfor %}
+
+    <div>90日間</div>
+    {% for rank in day_90_ranks  %}
+    <div class="border">
+        <div>{{ forloop.counter }} 位</div>
+        <div>{{ rank.product.name }}</div>
+    </div>
+    {% endfor %}
+
+    <div>365日間</div>
+    {% for rank in day_365_ranks %}
+    <div class="border">
+        <div>{{ forloop.counter }} 位</div>
+        <div>{{ rank.product.name }}</div>
+    </div>
+    {% endfor %}
+
+{% endblock %}
